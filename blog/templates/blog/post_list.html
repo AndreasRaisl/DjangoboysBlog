@@ -26,5 +26,16 @@
     <h2><a href="">My second post</a></h2>
     <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
 </div>
+
+<br> <br>
+
+<div>
+  {% for post in allPosts %}     
+    <h2> <a href=""> {{ post }} </a> </h2>
+    <p> Published: {{ post.published_date }} </p>
+    <p> {{ post.text | linebreaksbr }} </p>
+    <br><br>
+  {%  endfor %}  
+</div>
 </body>
 </html>
