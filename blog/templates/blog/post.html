@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+  <div class="post">
+    <div class="flowcontainer">
+    <h1 class="title"> {{  postToShow.title }} </h1>  
+    <div class="date"> <p> {{ postToShow.published_date }} </p> </div>
+    </div>
+    <div class="clearing"></div>
+    <p> {{ postToShow.text | linebreaksbr }} </p> 
+  </div>
+  
+{% endblock %}
